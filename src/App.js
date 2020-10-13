@@ -25,6 +25,7 @@ class App extends React.Component {
   state = {
     store: STORE,
   };
+
   handleDeleteCard = (cardId) => {
     console.log('delete card running')
     const {lists, allCards} = this.state.store;
@@ -42,6 +43,7 @@ class App extends React.Component {
       }
     })
   }
+
   handleAddRandomCard = (listId) => {
     console.log('add random card running')
     const newCard = newRandomCard()
@@ -64,6 +66,7 @@ class App extends React.Component {
       }
     })
   }
+
   renderList(store){
     const listMap = store.lists.map(list => {
       return(
@@ -79,6 +82,7 @@ class App extends React.Component {
     })
     return listMap
   }
+  
   render(){
     const { store } = this.state
     return (
